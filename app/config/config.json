@@ -1,0 +1,39 @@
+{
+  "development": {
+    "username": "root",
+    "password": "Ex1rermProject",
+    "database": "MotoCare",
+    "host": "159.223.59.43",
+    "port": 3306,
+    "dialect": "mysql",
+    "timezone": "Asia/Bangkok",
+    "dialectOptions": {
+      "timezone": "local"
+    }
+  },
+
+  "test": {
+    "username": "root",
+    "password": "Ex1rermProject",
+    "database": "MotoCare",
+    "host": "159.223.59.43",
+    "port": 3306,
+    "dialect": "mysql",
+    "timezone": "Asia/Bangkok",
+    "dialectOptions": {
+      "timezone": "local"
+    }
+  },
+  "production": {
+    "username": "root",
+    "password": "Ex1rermProject",
+    "database": "MotoCare",
+    "host": "159.223.59.43",
+    "port": 3306,
+    "dialect": "mysql",
+    "timezone": "Asia/Bangkok",
+    "dialectOptions": {
+      "timezone": "local"
+    }
+  }
+}

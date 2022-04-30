@@ -1,0 +1,23 @@
+npx sequelize db:drop
+npx sequelize db:create
+npx sequelize db:migrate
+npx sequelize db:seed:all
+
+
+ต้นทาง.belongsTo(models.ปลายทาง {
+  foreignKey: "FK",
+  as: "building",
+});
+
+
+ต้นทาง.hasMany(models.ปลายทาง {
+  foreignKey: "FK",
+  as: "ชื่อที่เราต้องการ",
+});
+
+ต้นทาง.hasOne(models.ปลายทาง {
+  foreignKey: "FK",
+  as: "ชื่อที่เราต้องการ",
+});
+
+
