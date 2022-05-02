@@ -1,5 +1,5 @@
 const { register,upload,login ,regisuser} = require("../controllers/users");
-
+const { getMachanic,editmachanic} = require("../controllers/machanic");
 
 module.exports = function (app) {
   app.post("/register", register);
@@ -9,6 +9,10 @@ module.exports = function (app) {
   app.put("/upload" , upload );
 
   app.post("/regisuser" , regisuser);
+
+  app.get("/getMachanic", getMachanic);
+
+  app.put("/editmachanic", editmachanic);
 
 
 };

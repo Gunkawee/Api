@@ -18,7 +18,7 @@ module.exports = (sequelize, DataTypes) => {
       });
       Machanic.belongsTo(models.Location, {
         foreignKey: "locationId",
-        as: "lcoation",
+        as: "location",
       });
     }
   }
@@ -27,7 +27,6 @@ module.exports = (sequelize, DataTypes) => {
       idCard: DataTypes.STRING,
       mfName: DataTypes.STRING,
       mlName: DataTypes.STRING,
-      homeImage: DataTypes.STRING,
       workPlaceImage: DataTypes.STRING,
       faceImage: DataTypes.STRING,
       workPlace: DataTypes.STRING,
