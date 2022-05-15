@@ -26,7 +26,9 @@ module.exports = {
       include: { model: AppointmentHistory, as: "userAppointment", require: true },
     });
     if (data) {
-      res.status(200).json(data);
+      res.status(200).send({
+        message: `Success`
+      });
     } else {
       res.status(500).send({
         message: `Can't Create Appointment`,
