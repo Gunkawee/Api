@@ -2,12 +2,12 @@
 
 module.exports = {
   async up(queryInterface, Sequelize) {
-    return queryInterface.removeColumn("Machanics", "homeImage", {
+    return queryInterface.removeColumn("Appointments", "locationId", {
     });
   },
 
   async down(queryInterface, Sequelize) {
-    return queryInterface.addColumn("Machanics", "homeImage", {
+    return queryInterface.addColumn("Appointments", "locationId", {
       type: Sequelize.STRING
     });
   },

@@ -13,7 +13,7 @@ module.exports = {
     let newImage = `${Date.now()}_${file.name}`
     console.log(newImage);
    
-
+ 
     if (latitude && longitude) {
       const createLocation = await Location.create({ latitude, longitude });
       locationId = createLocation.id;
@@ -76,7 +76,7 @@ module.exports = {
       uEmail: req.body.uEmail,
       uName: req.body.uName,
       uDisplay: req.body.uDisplay,
-      role:"USER"
+      role: req.body.role,
     });
     if(data){
       res.status(200).json(data);
@@ -87,7 +87,6 @@ module.exports = {
         message: 'Can not register' 
       });
     }
-  }
+  },
+  
 };
-
-

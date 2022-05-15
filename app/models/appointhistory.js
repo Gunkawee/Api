@@ -8,13 +8,13 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
-      AppointmentHistory.belongsTo(models.User, {
-        foreignKey: "userId",
-        as: "user",
-      });
+      // AppointmentHistory.belongsTo(models.User, {
+      //   foreignKey: "userId",
+      //   as: "user",
+      // });
       AppointmentHistory.belongsTo(models.Appointment, {
         foreignKey: "appointmentId",
-        as: "appopintment",
+        as: "userAppointment",
       });
     }
   }
@@ -34,7 +34,7 @@ module.exports = (sequelize, DataTypes) => {
           key: "id",
         },
       },
-      role: DataTypes.ENUM(
+      status: DataTypes.ENUM(
         "USER_CANCEL",
         "USER_APPOINT",
         "MACHANIC_DOING",

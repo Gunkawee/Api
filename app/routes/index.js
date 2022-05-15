@@ -1,5 +1,6 @@
 const { register,upload,login ,regisuser} = require("../controllers/users");
 const { getMachanic,editmachanic} = require("../controllers/machanic");
+const { createappointment,getAppointment} = require("../controllers/appointment");
 
 module.exports = function (app) {
   app.post("/register", register);
@@ -14,5 +15,7 @@ module.exports = function (app) {
 
   app.put("/editmachanic", editmachanic);
 
+  app.post("/createappointment", createappointment);
 
+  app.get("/getAppointment/:userId", getAppointment);
 };
