@@ -17,5 +17,5 @@ module.exports = function (app) {
 
   app.post("/createappointment", createappointment);
 
-  app.get("/getAppointment/:userId", getAppointment);
+  app.get("/getAppointment/:machanicId", getAppointment);
 };

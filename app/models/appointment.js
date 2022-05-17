@@ -14,7 +14,7 @@ module.exports = (sequelize, DataTypes) => {
       });
       Appointment.hasMany(models.AppointmentHistory, {
         foreignKey: "appointmentId",
-        as: "userAppointment",
+        as: "Appointment",
       });
     }
   }
@@ -27,6 +27,13 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.INTEGER,
         references: {
           model: "Location",
+          key: "id",
+        },
+      },
+      machanicId: {
+        type: DataTypes.INTEGER,
+        references: {
+          model: "Machanic",
           key: "id",
         },
       },

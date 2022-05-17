@@ -18,7 +18,7 @@ module.exports = (sequelize, DataTypes) => {
       });
       User.hasMany(models.AppointmentHistory, {
         foreignKey: "userId",
-        as: "appointmentHistory",
+        as: "user",
       });
     }
   }
