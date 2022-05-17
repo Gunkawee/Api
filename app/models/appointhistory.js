@@ -29,6 +29,7 @@ module.exports = (sequelize, DataTypes) => {
       },
       appointmentId: {
         type: DataTypes.INTEGER,
+        onDelete: "CASCADE",
         references: {
           model: "Appointment",
           key: "id",
@@ -38,9 +39,10 @@ module.exports = (sequelize, DataTypes) => {
         "USER_CANCEL",
         "USER_APPOINT",
         "MACHANIC_DOING",
-        "MACHANIC",
+        "MACHANIC",  //SUCCESS
         "MACHANIC_CANCEL"
       ),
+      used: DataTypes.BOOLEAN,
     },
     {
       sequelize,

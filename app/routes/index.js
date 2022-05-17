@@ -1,6 +1,6 @@
 const { register,upload,login ,regisuser} = require("../controllers/users");
 const { getMachanic,editmachanic} = require("../controllers/machanic");
-const { createappointment,getAppointment} = require("../controllers/appointment");
+const { createappointment,getAppointment, updateStatusAppointment} = require("../controllers/appointment");
 
 module.exports = function (app) {
   app.post("/register", register);
@@ -18,4 +18,6 @@ module.exports = function (app) {
   app.post("/createappointment", createappointment);
 
   app.get("/getAppointment/:machanicId", getAppointment);
+
+  app.post("/updateStatusAppointment", updateStatusAppointment);
 };
